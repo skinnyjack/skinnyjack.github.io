@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>Index</title>
+    <link rel="stylesheet" href="presentation.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="canvas_example.css" type="text/css" media="screen" charset="utf-8">
+    <script type="text/javascript" src='presentation.js'></script>
+    <script type="text/javascript" charset="utf-8" src='canvas_example.js'></script>
+</head>
+<body>
+    <div class="slide" id = 'slide-0'>
+        
+        <a href='#' class='nav-prev' onclick='prevSlide();return false'><</a>
+        <a href='#' class='nav-next' onclick='nextSlide(); return false'>></a>
+        <h1 style='vertical-align:center'>fgsfds</h1>
+    </div>
+
+    <div class="slide" id = 'slide-1'>
+        <a href='#' class='nav-prev' onclick='prevSlide();return false;'><</a>
+        <a href='#' class='nav-next' onclick='nextSlide();return false;'>></a>
+        <h1>fgsfds</h1>
+            <div id='canvas_stuff'>
+    <canvas id='canvas_example' width='550' height='410'></canvas>
+    <textarea rows='9' cols='20' id='canvas_example_shader'>
+precision mediump float;
+varying vec4 p;
+uniform float time;
+vec3 func(vec2 c){
+    float nn = 0.0;
+    vec3 col = vec3(0.0,0.0,0.0);
+    vec2 z;
+    z.x = p.x*0.6/time +time*0.1;
+    z.y=p.y*0.6/time+time*0.1;
+    float MAX = 2.0;
+    float max_iter = 3.0;
+    for(float n=0.;n<3.0;n+=0.01){
+        vec2 t =z;
+        z.x = t.x*t.x - t.y*t.y + c.x;
+        z.y = 2.*t.x*t.y+c.y;
+        nn = n;
+        if(z.x*z.x+z.y*z.y > MAX) break;
+    }
+    col.x = fract(nn)*0.3;
+    col.y = nn*0.1;
+    col.z = nn*0.8;
+    return col;
+}
+void main(void) {
+    vec3 col = func(vec2(.11+sin(time+5.)*0.01,-.65+sin(time)*0.01));
+    gl_FragColor = vec4(col, 1.0);
+}
+    </textarea><br>
+    <button class='canvas_example_btn' onclick='start_canvas_fun();'>RUN!</button>
+    <button class='canvas_example_btn' onclick='stop_canvas_fun();'>STOP</button>
+    <script>init();</script>
+    </div>
+    </div>
+    
+    <div class="slide" id='slide-2'>
+        
+        <a href='#' class='nav-prev' onclick='prevSlide(); return false;'><</a>
+        <a href='#' class='nav-next' onclick='nextSlide(); return false;'>></a>
+            <h1>fgsfds</h1>
+            <p>
+                <ul>
+                    <li> sadfasdf</li>
+                    <li> sadfasdf</li>
+                    <li> sadfasdf</li>
+                </ul>
+            </p>
+    </div>
+
+
+    <div class="slide" id='slide-3'>   
+        <a href='#' class='nav-prev' onclick='prevSlide();'><</a>
+        <a href='#' class='nav-next' onclick='nextSlide();'>></a>
+        <h1>Пони</h1>
+        <p>
+            <img src ='pony.jpg' width='660px'/>
+        </p>
+    </div>
+
+
+</body>
+</html>

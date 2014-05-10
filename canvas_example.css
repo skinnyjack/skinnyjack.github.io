@@ -1,0 +1,28 @@
+#canvas_stuff{
+    text-align: center;
+width:91%;
+}
+#canvas_example{
+    width:640;
+    height:480;
+    background-color:#222;
+margin:1%;
+float:left;
+    margin-right:0px;
+}
+#canvas_example_shader{
+    background-color:#e0e0e0;
+    border-style:solid;
+    font: 28pt monospace normal;
+    color: #202020;
+    margin:1%;
+    float:right;
+    margin-left:0px;
+}
+.canvas_example_btn{
+background-color:#e0e0e0;
+color:#202020;
+font: 32pt sans-serif normal;
+margin: 1%;
+    border-style:solid;
+}
