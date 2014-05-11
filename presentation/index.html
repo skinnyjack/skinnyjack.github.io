@@ -6,8 +6,11 @@
     <title>Index</title>
     <link rel="stylesheet" href="styles/presentation.css" type="text/css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="styles/canvas_example.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles/sounds.css"type="text/css" media="screen" charset="utf-8">
     <script type="text/javascript" src='scripts/presentation.js'></script>
     <script type="text/javascript" charset="utf-8" src='scripts/canvas_example.js'></script>
+    <script type="text/javascript" charset="utf-8" src='scripts/riffwave.js'></script>
+    <script type="text/javascript" charset="utf-8" src='scripts/soundz.js'></script>
 </head>
 <body>
     <div class="slide" id = 'slide-0'>
@@ -85,6 +88,17 @@ void main(void) {
     </div>
 
     <div class="slide" id='slide-4'>   
+        <a href='#' class='nav-prev' onclick='prevSlide();'><</a>
+        <a href='#' class='nav-next' onclick='nextSlide();'>></a>
+        <h1>Генерация звуков</h1>
+       <div class='audio-block'> 
+        <textarea id='a-data' rows='1' cols='30'>res = (t>>4) | (t>>2) * 50 & (t>>6);</textarea><br>
+        <button id ='a-button' class = 'canvas_example_btn' onclick='sndPlay();'> PLAY </button><br>
+        <audio id='a-player' controls ></audio>
+        </div>
+    </div>
+
+<div class="slide" id='slide-5'>   
         <a href='#' class='nav-prev' onclick='prevSlide();'><</a>
         <a href='#' class='nav-next' onclick='nextSlide();'>></a>
         <h1>skinnyjack.github.io/presentation/</h1>

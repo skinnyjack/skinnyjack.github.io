@@ -1,0 +1,18 @@
+#a-data{
+    text-align:center;
+    font: 28pt monospace normal;
+    color: #202020;
+    background: #f0f0f0;
+    border-color: #f0f0f0;
+    border-style:solid;
+    border-width:2px;
+    padding: 1%;
+}
+.audio-block{
+    vertical-align:center;
+padding-top:10%;
+}
+#a-data:focus{
+    border-color: #2b2b2b;
+    background-color: #e0e0e0;
+}
