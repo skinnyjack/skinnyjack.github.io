@@ -1,6 +1,7 @@
 #canvas_stuff{
     text-align: center;
 width:91%;
+      vertical-align:center;
 }
 #canvas_example{
     width:640;
@@ -11,18 +12,40 @@ float:left;
     margin-right:0px;
 }
 #canvas_example_shader{
-    background-color:#e0e0e0;
+    background-color:#f0f0f0;
     border-style:solid;
+    border-color:#f0f0f0;
     font: 28pt monospace normal;
     color: #202020;
     margin:1%;
     float:right;
     margin-left:0px;
+overflow:hidden;
+width:45%;
+         margin-right:2%;
+}
+#canvas_example_shader:focus{
+    background-color:#e0e0e0;
+    border-color:#2b2b2b;
+    border-style:solid;
+    overflow:auto;
 }
 .canvas_example_btn{
-background-color:#e0e0e0;
+background-color:#f0f0f0;
 color:#202020;
 font: 32pt sans-serif normal;
 margin: 1%;
+border-color:#f0f0f0;
+border-style:solid;
+}
+
+.canvas_example_btn:hover{
+    background-color:#e0e0e0;
+    border-color:#2b2b2b;
     border-style:solid;
+}
+
+.canvas_buttons{
+    padding-top:35%;
+    text-align:center;
 }

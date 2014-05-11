@@ -14,13 +14,13 @@
         
         <a href='#' class='nav-prev' onclick='prevSlide();return false'><</a>
         <a href='#' class='nav-next' onclick='nextSlide(); return false'>></a>
-        <h1 style='vertical-align:center'>fgsfds</h1>
+        <h1 style='vertical-align:center; margin-top:20%'>fgsfds</h1>
     </div>
 
     <div class="slide" id = 'slide-1'>
         <a href='#' class='nav-prev' onclick='prevSlide();return false;'><</a>
         <a href='#' class='nav-next' onclick='nextSlide();return false;'>></a>
-        <h1>fgsfds</h1>
+        <h1>Шейденая песочница</h1>
             <div id='canvas_stuff'>
     <canvas id='canvas_example' width='550' height='410'></canvas>
     <textarea rows='9' cols='20' id='canvas_example_shader'>
@@ -52,8 +52,10 @@ void main(void) {
     gl_FragColor = vec4(col, 1.0);
 }
     </textarea><br>
+    <div class='canvas_buttons'>
     <button class='canvas_example_btn' onclick='start_canvas_fun();'>RUN!</button>
     <button class='canvas_example_btn' onclick='stop_canvas_fun();'>STOP</button>
+    </div>
     <script>init();</script>
     </div>
     </div>
